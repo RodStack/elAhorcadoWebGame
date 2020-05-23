@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>El Ahorcado</h1>
+    <p>Encuentra la palabra oculta</p>
+    <div class="game-container">
+        <svg height="250" width="200" class=figure-container>
+            <!-- Colagdor -->
+            <line x1="60" y1="20" x2="140" y2="20"/>
+            <line x1="140" y1="20" x2="140" y2="50"/>
+            <line x1="60" y1="20" x2="60" y2="230"/>
+            <line x1="20" y1="230" x2="100" y2="230"/>
+
+            <!-- Cabeza -->
+            <circle cx="140" cy="70" r="20" class="figure-part"/>
+            <circle cx="147" cy="65" r="1" class="figure-part"/>
+            <circle cx="134" cy="65" r="1" class="figure-part"/>
+            <line x1="134" y1="77" x2="147" y2="77" class="figure-part"/>
+
+            <!-- cuerpo -->
+            <line x1="140" y1="90" x2="140" y2="160" class="figure-part"/>
+            <!-- Brazos -->
+            <line x1="140" y1="110" x2="170" y2="90" class="figure-part"/>
+            <line x1="140" y1="110" x2="110" y2="90" class="figure-part"/>
+            <!-- Piernas -->
+            <line x1="140" y1="160" x2="120" y2="200" class="figure-part"/>
+            <line x1="140" y1="160" x2="160" y2="200" class="figure-part"/>
+        </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters"></div>
+        </div>
+        <div class="word" id="word">
+        <!-- divs de letras creados en js -->
+        </div>
+    </div>
+
+    <!-- Container para el mensaje final -->
+
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <h2 id="final-message"></h2>
+        <button id="play-button">Volver a Jugar</button>
+      </div>
+    </div>
+    <!-- Nototicaciones -->
+    <div class="notification-container" id="notification-container">
+        <p>Ya haz ingresado esa letra, prueba con otra</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
